@@ -1,12 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { UserStyle } from "./styles/userStyle";
 import { GlobalStyle } from "./styles/globalStyle";
 import { ThemeProvider } from "styled-components";
 import { theme } from "./styles/theme";
 import { RecoilRoot } from "recoil";
+import Router from "./router";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -15,7 +15,7 @@ root.render(
       <ThemeProvider theme={theme}>
         <GlobalStyle />
         <UserStyle />
-        <App />
+        <Router />
       </ThemeProvider>
     </RecoilRoot>
   </React.StrictMode>,
