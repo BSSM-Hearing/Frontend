@@ -5,7 +5,7 @@ export default function Test() {
   return (
     <div>
       <Frame>
-        <h1>안녕하세용</h1>
+        푸하하
       </Frame>
     </div>
   );
