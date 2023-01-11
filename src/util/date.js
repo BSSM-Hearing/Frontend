@@ -1,12 +1,12 @@
 export const getKoreanDate = (
   date,
   options = {
-    year: "numeric",
     month: "short",
     day: "numeric",
     hour: "numeric",
     hour12: false,
     minute: "numeric",
+    weekday: "short",
   },
 ) => {
   return new Intl.DateTimeFormat("ko-KR", options).format(date);
