@@ -21,6 +21,17 @@ export const InputBox = styled.div`
   width: 100%;
   height: 65%;
 `;
+export const RadioBox = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+
+  input:nth-child(2) {
+    margin-left: 5%;
+  }
+`;
 export const SubmitBox = styled.div`
   height: 15%;
   display: flex;
@@ -33,7 +44,9 @@ export const SubmitBtn = styled(S.SubmitBtn)`
   height: 70%;
   width: 100%;
 `;
-export const Link = styled(S.Link)``;
+export const Link = styled(S.Link)`
+  margin-top: 2%;
+`;
 
 export const EmptyBox = styled.div`
   height: 10%;
