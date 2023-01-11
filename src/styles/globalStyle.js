@@ -14,7 +14,10 @@ html {
 body {
   margin: 0;
   padding: 20px;
-  background-color: ${theme.background};
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+  background-image: linear-gradient(to top, ${theme.secondary} 20%, ${theme.main} 20%);
 }
 
 main {

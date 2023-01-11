@@ -1,9 +1,10 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import App from "./App";
-import Test from "./pages/Test";
+import Test from "./pages/test";
 import Speech from "./components/speech";
 import Login from "./pages/login/Index";
 import Register from "./pages/register/Index";
+import Introduce from "./pages/introduce";
 
 const Router = () => {
   return (
@@ -14,6 +15,7 @@ const Router = () => {
         <Route path="/speech" element={<Speech />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/introduce" element={<Introduce />} />
       </Routes>
     </BrowserRouter>
   );
