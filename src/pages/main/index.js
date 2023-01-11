@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Frame from "../../components/common/frame";
 import { getKoreanDate } from "../../util/date";
 import Button from "../../components/atom/button";
-import CellPhoneIcon from "../../components/icon/CellPhoneIcon";
+import { CellPhoneIcon, VibrationPhoneIcon,TalkingPeopleIcon, GuardIcon } from "../../components/icon";
 
 export default function Main() {
   const [date, setDate] = useState("");
@@ -25,7 +25,7 @@ export default function Main() {
             이름님, <br /> 무엇을 하실건가요?
           </p>
         </div>
-        <div className="grid grid-cols-2 grid-rows-2">
+        <div className="grid grid-cols-2 grid-rows-2 mt-8">
           <div>
             <Button className="bg-[#1C69FF]">
               <CellPhoneIcon />
@@ -35,29 +35,23 @@ export default function Main() {
 
           <div>
             <Button className="bg-[#373737]">
-              <CellPhoneIcon />
+              <VibrationPhoneIcon />
             </Button>
             <h4 className="text-4xl text-center">외출 모드</h4>
           </div>
 
           <div>
             <Button className="bg-[#98E5D4]">
-              <CellPhoneIcon />
+              <TalkingPeopleIcon />
             </Button>
-            <h4 className="text-4xl text-center">뭐시기 모드</h4>
+            <h4 className="text-4xl text-center">발음 연습</h4>
           </div>
 
           <div>
             <Button className="bg-[#F6CE60]">
-              <CellPhoneIcon />
+              <GuardIcon />
             </Button>
-            <h4 className="text-4xl text-center">뭐시기 모드</h4>
-          </div>
-          <div>
-            <Button className="bg-[#F6CE60]">
-              <CellPhoneIcon />
-            </Button>
-            <h4 className="text-4xl text-center">뭐시기 모드</h4>
+            <h4 className="text-4xl text-center">보호자 호출</h4>
           </div>
           
         </div>
