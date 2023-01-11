@@ -12,6 +12,18 @@ export const getKoreanDate = (
   return new Intl.DateTimeFormat("ko-KR", options).format(date);
 };
 
+export const getDateOnly = (
+  date,
+  options = {
+    month: "short",
+    day: "numeric",
+    weekday: "short",
+  },
+) => {
+  return new Intl.DateTimeFormat("ko-KR", options).format(date);
+};
+
+
 export const getSlot = (date) => {
   if (6 <= date.getHours() && date.getHours() < 12) return "아침";
   if (13 <= date.getHours() && date.getHours() < 18) return "오후";

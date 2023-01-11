@@ -1,8 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Frame from "../../components/common/frame";
-import { getKoreanDate } from "../../util/date";
-import Button from "../../components/atom/button";
-import { CellPhoneIcon, VibrationPhoneIcon,TalkingPeopleIcon, GuardIcon } from "../../components/icon";
+import { getKoreanDate, getSlot } from "../../util/date";
+import QuickMenu from "../../components/main/quickMenu";
+import DashBoard from "../../components/main/dashBoard";
+import Statistics from "../../components/atom/statistics";
+import { DownIcon } from "../../components/icon";
 
 export default function Main() {
   const [date, setDate] = useState("");
@@ -19,42 +21,23 @@ export default function Main() {
   return (
     <Frame notice>
       <div className="p-8 w-full h-auto">
-        <div className="flex flex-col items-center">
-          <h2 className="mt-24 text-[36px] font-bold">{date}</h2>
-          <p className="inline text-[30px] mt-7">
-            이름님, <br /> 무엇을 하실건가요?
-          </p>
+        <DashBoard slot={getSlot(new Date())} />
+        <div className="flex justify-around mt-24 mb-[80px]">
+          <Statistics count="10" type="대화" percent="10" />
+          <Statistics count="10" percent="10" />
         </div>
-        <div className="grid grid-cols-2 grid-rows-2 mt-8">
-          <div>
-            <Button className="bg-[#1C69FF]">
-              <CellPhoneIcon />
-            </Button>
-            <h4 className="text-4xl text-center">전화 모드</h4>
-          </div>
-
-          <div>
-            <Button className="bg-[#373737]">
-              <VibrationPhoneIcon />
-            </Button>
-            <h4 className="text-4xl text-center">외출 모드</h4>
-          </div>
-
-          <div>
-            <Button className="bg-[#98E5D4]">
-              <TalkingPeopleIcon />
-            </Button>
-            <h4 className="text-4xl text-center">발음 연습</h4>
-          </div>
-
-          <div>
-            <Button className="bg-[#F6CE60]">
-              <GuardIcon />
-            </Button>
-            <h4 className="text-4xl text-center">보호자 호출</h4>
-          </div>
-          
-        </div>
+        <button
+          type="button"
+          className="mx-auto block mb-10"
+          onClick={() =>
+            document
+              .querySelector("#quick-menu")
+              .scrollIntoView({ behavior: "smooth" })
+          }
+        >
+          <DownIcon />
+        </button>
+        <QuickMenu date={date} />
       </div>
     </Frame>
   );
