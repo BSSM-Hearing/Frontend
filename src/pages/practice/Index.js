@@ -7,30 +7,34 @@ import useDebounce from "../../hooks/useDebounce";
 
 const Index = () => {
   const data = "밥은 먹고 다녀?";
-  const [showVal, setShowVal] = useState();
-  const deBouncedValue = useDebounce(showVal, 2000);
-  useEffect(() => {
-    setShowVal(deBouncedValue);
-  }, [deBouncedValue]);
+  const [showVal, setShowVal] = useState("");
+  const [defaultValue, setDefaultValue] = useState("");
+  const deBouncedValue = useDebounce({ callback: showVal, timeMS: 2000 });
+
   const { listen, listening, stop } = useSpeechRecognition({
-    // onResult: (result) => {
-    //   setShowVal(result);
-    // },
+    onResult: (result) => {
+      setShowVal(result);
+    },
   });
+
+  useEffect(() => {
+    setDefaultValue(showVal);
+  }, [deBouncedValue]);
+
   return (
     <Frame>
       <S.PracticeContainer>
         <S.BackBtn as={MdArrowBack} color="black" size={50} />
         <S.DialogBox>
           <S.Dialog bgColor={"white"}>{data}</S.Dialog>
-          <S.Dialog bgColor={"#ccccce"}>{showVal}</S.Dialog>
+          <S.Dialog bgColor={"#ccccce"}>{defaultValue}</S.Dialog>
         </S.DialogBox>
         <S.MicBox>
           <S.ExplainText>눌러서 말하기</S.ExplainText>
           <S.Mic onMouseDown={listen} onMouseUp={stop}>
             <S.MicBtn as={MdMic} size={70} color={"white"} />
           </S.Mic>
-          {/* {listening && <p>마이크 입력중...</p>} */}
+          {listening && <S.ExplainText>마이크 입력중...</S.ExplainText>}
         </S.MicBox>
       </S.PracticeContainer>
     </Frame>

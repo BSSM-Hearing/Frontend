@@ -56,6 +56,7 @@ export const Mic = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
+  border: none;
 `;
 export const MicBtn = styled.svg`
   border: 4px solid white;
