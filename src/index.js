@@ -7,6 +7,7 @@ import { ThemeProvider } from "styled-components";
 import { theme } from "./styles/theme";
 import { RecoilRoot } from "recoil";
 import Router from "./router";
+import "styles/tailwind.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

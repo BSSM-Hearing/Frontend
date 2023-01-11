@@ -17,7 +17,7 @@ body {
   width: 100%;
   height: 100vh;
   box-sizing: border-box;
-  background-image: linear-gradient(to top, ${theme.secondary} 20%, ${theme.main} 20%);
+  background-image: linear-gradient(to top, ${theme.secondary} 20%, ${theme.deepMain} 20%);
 }
 
 main {
