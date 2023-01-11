@@ -9,7 +9,7 @@ export const LoginContainer = styled.div`
   justify-content: space-between;
 `;
 
-export const LoginForm = styled.div`
+export const LoginForm = styled.form`
   /* background-color: black; */
   width: 80%;
   height: 40%;
@@ -38,6 +38,8 @@ export const Input = styled.input`
   border-radius: 100px;
   border: 2px solid blue;
   box-sizing: border-box;
+  font-size: 2.5rem;
+  padding-left: 5%;
 `;
 
 export const SubmitBtn = styled.button`
