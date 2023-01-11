@@ -38,11 +38,12 @@ const Index = () => {
             placeholder="비밀번호 입력"
           />
           <S.SubmitBtn type="submit">로그인</S.SubmitBtn>
+          <S.LinkTabs>
+            <S.Link>회원가입</S.Link>
+            <S.Link>비밀번호 찾기</S.Link>
+          </S.LinkTabs>
         </S.LoginForm>
-        <S.BottomBox>
-          <S.Link>회원가입</S.Link>
-          <S.Link>비밀번호 찾기</S.Link>
-        </S.BottomBox>
+        <S.BottomBox></S.BottomBox>
       </S.LoginContainer>
     </Frame>
   );

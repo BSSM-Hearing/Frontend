@@ -12,7 +12,7 @@ export const LoginContainer = styled.div`
 export const LoginForm = styled.form`
   /* background-color: black; */
   width: 80%;
-  height: 40%;
+  height: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -21,43 +21,48 @@ export const LoginForm = styled.form`
 
 export const TopBox = styled.div`
   width: 170%;
-  height: 30%;
+  height: 20%;
   background-color: #1c69ff;
   border-end-start-radius: 50%;
   border-end-end-radius: 50%;
-  font-size: 7.2rem;
+  font-size: 6.2rem;
   color: white;
   text-align: center;
-  line-height: 270%;
+  line-height: 200%;
 `;
 
 export const Input = styled.input`
   width: 100%;
-  height: 23%;
+  height: 18%;
   background-color: white;
   border-radius: 100px;
   border: 2px solid blue;
   box-sizing: border-box;
-  font-size: 2.5rem;
+  font-size: 2rem;
   padding-left: 5%;
 `;
 
 export const SubmitBtn = styled.button`
   width: 100%;
-  height: 23%;
+  height: 18%;
   background-color: #1c69ff;
   border-radius: 100px;
   border: none;
-  font-size: 3.5rem;
+  font-size: 3rem;
   color: white;
 `;
 
 export const BottomBox = styled.div`
   width: 100%;
-  height: 30%;
+  height: 20%;
 `;
 
-export const Link = styled.p`
+export const LinkTabs = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+export const Link = styled.span`
   color: #1c69ff;
   font-size: 2rem;
   text-align: center;

@@ -3,6 +3,7 @@ import App from "./App";
 import Test from "./pages/Test";
 import Speech from "./components/speech";
 import Login from "./pages/login/Index";
+import Register from "./pages/register/Index";
 
 const Router = () => {
   return (
@@ -12,6 +13,7 @@ const Router = () => {
         <Route path="/test" element={<Test />} />
         <Route path="/speech" element={<Speech />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
       </Routes>
     </BrowserRouter>
   );
