@@ -6,6 +6,7 @@ import Login from "./pages/login/Index";
 import Register from "./pages/register/Index";
 import Introduce from "./pages/introduce";
 import Practice from "./pages/practice/Index";
+import CallMode from "./pages/callMode/Index";
 
 const Router = () => {
   return (
@@ -17,6 +18,7 @@ const Router = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/practice" element={<Practice />} />
+        <Route path="/callMode" element={<CallMode />} />
         <Route path="/introduce" element={<Introduce />} />
       </Routes>
     </BrowserRouter>
