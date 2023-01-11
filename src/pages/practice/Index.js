@@ -4,6 +4,7 @@ import * as S from "./Style";
 import { MdArrowBack, MdMic } from "react-icons/md";
 import { useSpeechRecognition } from "react-speech-kit";
 import useDebounce from "../../hooks/useDebounce";
+import { Link } from "react-router-dom";
 
 const Index = () => {
   const data = "밥은 먹고 다녀?";
@@ -24,7 +25,9 @@ const Index = () => {
   return (
     <Frame>
       <S.PracticeContainer>
-        <S.BackBtn as={MdArrowBack} color="black" size={50} />
+        <Link to="/">
+          <S.BackBtn as={MdArrowBack} color="black" size={50} />
+        </Link>
         <S.DialogBox>
           <S.Dialog bgColor={"white"}>{data}</S.Dialog>
           <S.Dialog bgColor={"#ccccce"}>{defaultValue}</S.Dialog>
