@@ -1,5 +1,6 @@
 const main = "#58C0E1";
 const lightMain = "#98E5FB";
+const deepMain = "#1C69FF";
 const secondary = "#F6CE60";
 const background = "#58C0E1";
 const green = "#3BB143";
@@ -136,6 +137,7 @@ const gray = {
 export const theme = {
   main,
   lightMain,
+  deepMain,
   secondary,
   background,
   red,
