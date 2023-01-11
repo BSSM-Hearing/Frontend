@@ -1,4 +1,6 @@
 import { createGlobalStyle } from "styled-components";
+import { theme } from "./theme";
+
 export const GlobalStyle = createGlobalStyle` 
 
 html {
@@ -11,6 +13,8 @@ html {
 
 body {
   margin: 0;
+  padding: 20px;
+  background-color: ${theme.background};
 }
 
 main {
