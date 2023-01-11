@@ -25,10 +25,11 @@ export const TopBox = styled.div`
   background-color: #1c69ff;
   border-end-start-radius: 50%;
   border-end-end-radius: 50%;
-  font-size: 6.2rem;
+  font-size: 5.2rem;
+  font-weight: 700;
   color: white;
   text-align: center;
-  line-height: 200%;
+  line-height: 250%;
 `;
 
 export const Input = styled.input`

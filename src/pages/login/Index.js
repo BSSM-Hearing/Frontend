@@ -3,13 +3,15 @@ import Frame from "../../components/common/frame/index";
 import { set, useForm } from "react-hook-form";
 import * as S from "./Style";
 import axios from "axios";
+import * as qs from "qs";
 
 const Index = () => {
-  const { register, watch, handleSubmit } = useForm({});
+  const { register, watch, handleSubmit } = useForm();
+  const local_url = "http://10.150.149.2:3000";
   console.log(watch());
-  const onValid = () => {
+  const onValid = (data) => {
     axios
-      .post("", watch())
+      .post(`${local_url}/api/user/login`, qs.stringify(data))
       .then((res) => {
         console.log(res);
       })
@@ -26,15 +28,16 @@ const Index = () => {
         <S.TopBox>로그인</S.TopBox>
         <S.LoginForm onSubmit={handleSubmit(onValid, onInvalid)}>
           <S.Input
-            {...register("Id", {
-              required: "아이디를 입력해주세요.",
+            {...register("email", {
+              required: "이메일을 입력해주세요.",
             })}
-            placeholder="아이디 입력"
+            placeholder="이메일 입력"
           />
           <S.Input
-            {...register("Password", {
+            {...register("password", {
               required: "비밀번호를 입력해주세요.",
             })}
+            type="password"
             placeholder="비밀번호 입력"
           />
           <S.SubmitBtn type="submit">로그인</S.SubmitBtn>
