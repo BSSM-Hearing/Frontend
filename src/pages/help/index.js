@@ -1,35 +1,29 @@
-import React, { useEffect, useState } from "react";
-import { io } from "socket.io-client";
+import React from "react";
+import { useNavigate, useParams } from "react-router-dom";
+
+import Frame from "../../components/common/frame";
 
 export default function Help() {
-  const [socket, setSocket] = useState();
+  const { id } = useParams();
+  const navigate = useNavigate();
 
-  useEffect(() => {
-    const socketIo = io("http://localhost:8080", {
-      cors: {
-        origin: "http://localhost:8080",
-        credentials: true,
-      },
-      transports: ["websocket"],
-      query: {
-        tenant: "EGU",
-      },
-    });
+  const isEmergency = (id) => {
+    if (window.confirm("긴급 상황인가요?")) {
+      navigate(`/help/real/${id}`);
+    }
+  };
 
-    socketIo.on("responsRoom", (data) => {
-      console.log(data);
-    });
-
-    setSocket(socketIo);
-  }, []);
-
-  useEffect(() => {
-    return () => {
-      if (socket) {
-        socket.disconnect();
-      }
-    };
-  }, [socket]);
-
-  return <div>살려주삼</div>;
+  return (
+    <Frame rollback>
+      <div className="p-10 w-full h-full flex items-center justify-center">
+        <button
+          type="button"
+          className="rounded-full bg-red-500 text-white p-10 w-[200px] h-[200px]"
+          onClick={() => isEmergency(id)}
+        >
+          <h1 className="text-[48px] m-0 font-bold">긴급</h1>
+        </button>
+      </div>
+    </Frame>
+  );
 }

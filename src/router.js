@@ -7,7 +7,10 @@ import Introduce from "./pages/introduce";
 import Practice from "./pages/practice/Index";
 import CallMode from "./pages/callMode/Index";
 import Main from "./pages/main";
+import Help from "./pages/help";
 import Analytic from "./pages/analytic";
+import NotFound from "./pages/404";
+import Real from "./pages/help/real";
 
 const Router = () => {
   return (
@@ -22,6 +25,9 @@ const Router = () => {
         <Route path="/callMode" element={<CallMode />} />
         <Route path="/introduce" element={<Introduce />} />
         <Route path="/analytic" element={<Analytic />} />
+        <Route path="/help/:id" element={<Help />} />
+        <Route path="/help/real/:id" element={<Real />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   );
