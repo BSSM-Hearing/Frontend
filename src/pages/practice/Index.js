@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Frame from "../../components/common/frame";
 import * as S from "./Style";
-import { MdArrowBack, MdMic } from "react-icons/md";
+import { MdMic } from "react-icons/md";
 import { useSpeechRecognition } from "react-speech-kit";
 import useDebounce from "../../hooks/useDebounce";
-import { Link } from "react-router-dom";
 import Popup from "react-animated-popup";
 import { delay } from "q";
 import { useNavigate } from "react-router-dom";

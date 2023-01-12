@@ -1,6 +1,6 @@
 import React from "react";
 import Frame from "../../components/common/frame/index";
-import { set, useForm } from "react-hook-form";
+import {  useForm } from "react-hook-form";
 import * as S from "./Style";
 import axios from "axios";
 import * as qs from "qs";
