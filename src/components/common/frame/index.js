@@ -50,6 +50,7 @@ export default function Frame({ children, notice, rollback, down }) {
             transform: "translate(-50%, -50%)",
             zIndex: "100",
           }}
+          onClick={() => navigate("#quick-menu")}
         >
           <DownIcon />
         </span>
