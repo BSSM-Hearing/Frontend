@@ -62,3 +62,47 @@ export const MicBtn = styled.svg`
   border: 4px solid white;
   border-radius: 200px;
 `;
+
+export const PopBox = styled.div`
+  width: 70%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+`;
+
+export const ResultBox = styled.div`
+  width: 110%;
+  height: 40%;
+  /* background-color: #ccc; */
+  margin-bottom: 10%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+`;
+export const Score = styled.span`
+  font-size: 5rem;
+`;
+export const Feedback = styled.p`
+  font-size: 2rem;
+`;
+
+export const Buttons = styled.div`
+  width: 130%;
+  height: 20%;
+  /* background-color: #ccc; */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+`;
+export const SelectBtn = styled.button`
+  width: 40%;
+  height: 80%;
+  background-color: #1c69ff;
+  border-radius: 10px;
+  font-size: 2rem;
+  color: white;
+`;
