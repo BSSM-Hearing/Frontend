@@ -8,6 +8,7 @@ import Analytic from "./pages/analytic";
 import Practice from "./pages/practice/Index";
 import CallMode from "./pages/callMode/Index";
 import NearSound from "./pages/nearSound/Index";
+import FindSound from "./pages/findSound/Index";
 
 const Router = () => {
   return (
@@ -21,6 +22,7 @@ const Router = () => {
         <Route path="/callMode" element={<CallMode />} />
         <Route path="/introduce" element={<Introduce />} />
         <Route path="/nearsound" element={<NearSound />} />
+        <Route path="/findsound" element={<FindSound />} />
         <Route path="/analytic" element={<Analytic />} />
       </Routes>
     </BrowserRouter>
