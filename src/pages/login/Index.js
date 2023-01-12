@@ -1,6 +1,6 @@
 import React from "react";
 import Frame from "../../components/common/frame/index";
-import {  useForm } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import * as S from "./Style";
 import axios from "axios";
 import * as qs from "qs";
@@ -13,7 +13,7 @@ const Index = () => {
     axios
       .post(`${local_url}/api/user/login`, qs.stringify(data))
       .then((res) => {
-        console.log(res);
+        
       })
       .catch((err) => {
         alert(err);

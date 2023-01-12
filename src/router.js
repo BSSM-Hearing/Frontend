@@ -29,8 +29,8 @@ const Router = () => {
         <Route path="/nearsound" element={<NearSound />} />
         <Route path="/findsound" element={<FindSound />} />
         <Route path="/analytic" element={<Analytic />} />
-        <Route path="/help/:id" element={<Help />} />
-        <Route path="/help/real/:id" element={<Real />} />
+        <Route path="/help" element={<Help />} />
+        <Route path="/help/real" element={<Real />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>

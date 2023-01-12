@@ -11,14 +11,7 @@ export default function Real() {
 
   useEffect(() => {
     const socketIo = io("http://localhost:8080", {
-      cors: {
-        origin: "http://localhost:8080",
-        credentials: true,
-      },
       transports: ["websocket"],
-      query: {
-        tenant: "EGU",
-      },
     });
 
     socketIo.on("responsRoom", (data) => {
