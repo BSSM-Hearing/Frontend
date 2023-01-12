@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import Frame from "../../components/common/frame/index";
 import * as S from "./Style";
+import { useNavigate } from "react-router";
+import { useSearchParams } from "react-router-dom";
 
-const Index = ({ text }) => {
+const Index = () => {
+  const [searchParams, setSearchPrams] = useSearchParams();
+  const text = searchParams.get("text");
+  const router = useNavigate();
   return (
     <Frame rollback>
       <S.Container>
@@ -11,8 +16,12 @@ const Index = ({ text }) => {
         <S.Line></S.Line>
         <S.Question>나를 부르는 소리가 맞나요?</S.Question>
         <S.SelectButtons>
-          <S.SelectBtn bgColor="red">아니요</S.SelectBtn>
-          <S.SelectBtn bgColor="#1C69FF">확인</S.SelectBtn>
+          <S.SelectBtn onClick={() => router(-1)} bgColor="red">
+            아니요
+          </S.SelectBtn>
+          <S.SelectBtn onClick={() => router("/callMode")} bgColor="#1C69FF">
+            확인
+          </S.SelectBtn>
         </S.SelectButtons>
       </S.Container>
     </Frame>

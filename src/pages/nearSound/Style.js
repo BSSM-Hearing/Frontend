@@ -19,10 +19,13 @@ export const IconText = styled.span`
   font-weight: 800;
 `;
 export const StartBtn = styled.button`
-  width: 40%;
+  padding: 0 10px;
+  width: 43%;
   height: 10%;
   background-color: #1c69ff;
   border-radius: 20px;
+  font-size: 3rem;
+  color: white;
 `;
 export const Text = styled.p`
   font-size: 3rem;
