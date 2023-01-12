@@ -27,12 +27,6 @@ const Index = () => {
   return (
     <Frame rollback>
       <S.PracticeContainer>
-<<<<<<< HEAD
-        <Link to="/">
-          <S.BackBtn as={MdArrowBack} color="black" size={50} />
-        </Link>
-=======
->>>>>>> dd1fac56a99fdc687c3422341fe2cc5e2c4f67f8
         <S.DialogBox>
           <S.Dialog bgColor={"white"}>{data}</S.Dialog>
           <S.Dialog bgColor={"#ccccce"}>{value}</S.Dialog>
