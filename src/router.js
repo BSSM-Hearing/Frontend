@@ -11,6 +11,8 @@ import Help from "./pages/help";
 import Analytic from "./pages/analytic";
 import NotFound from "./pages/404";
 import Real from "./pages/help/real";
+import NearSound from "./pages/nearSound/Index";
+import FindSound from "./pages/findSound/Index";
 
 const Router = () => {
   return (
@@ -24,6 +26,8 @@ const Router = () => {
         <Route path="/practice" element={<Practice />} />
         <Route path="/callMode" element={<CallMode />} />
         <Route path="/introduce" element={<Introduce />} />
+        <Route path="/nearsound" element={<NearSound />} />
+        <Route path="/findsound" element={<FindSound />} />
         <Route path="/analytic" element={<Analytic />} />
         <Route path="/help/:id" element={<Help />} />
         <Route path="/help/real/:id" element={<Real />} />
