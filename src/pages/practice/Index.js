@@ -9,25 +9,26 @@ const Index = () => {
   const data = "밥은 먹고 다녀?";
   const [showVal, setShowVal] = useState("");
   const [defaultValue, setDefaultValue] = useState("");
-  const deBouncedValue = useDebounce({ callback: showVal, timeMS: 2000 });
+  const [value, setValue] = useState();
+  const { debounce } = useDebounce();
 
   const { listen, listening, stop } = useSpeechRecognition({
     onResult: (result) => {
       setShowVal(result);
+      debounce(() => setValue(result), 500);
     },
   });
 
-  useEffect(() => {
-    setDefaultValue(showVal);
-  }, [deBouncedValue]);
+  // useEffect(() => {
+  //   setDefaultValue(showVal);
+  // }, []);
 
   return (
-    <Frame>
+    <Frame rollback>
       <S.PracticeContainer>
-        <S.BackBtn as={MdArrowBack} color="black" size={50} />
         <S.DialogBox>
           <S.Dialog bgColor={"white"}>{data}</S.Dialog>
-          <S.Dialog bgColor={"#ccccce"}>{defaultValue}</S.Dialog>
+          <S.Dialog bgColor={"#ccccce"}>{value}</S.Dialog>
         </S.DialogBox>
         <S.MicBox>
           <S.ExplainText>눌러서 말하기</S.ExplainText>

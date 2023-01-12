@@ -40,19 +40,15 @@ export const DialogBox = styled.div`
   height: 60%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: start;
+  align-items: center;
+  overflow: scroll;
+  /* background-color: #ccc; */
 `;
-export const LeftDialog = styled.div`
+export const Dialog = styled.div`
   width: 60%;
   height: 16%;
-  background-color: ${(props) => props.bgColor};
-  box-shadow: 1px 4px 8px 2px #aaa;
   border-radius: 15px;
-  margin-left: 5%;
-  padding: 2%;
   font-size: 2rem;
-`;
-export const RightDialog = styled(LeftDialog)`
-  margin-left: 30%;
-  color: white;
+  margin: 10px 0;
 `;
